@@ -1,0 +1,848 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SerenaBot</RootNamespace>
+    <AssemblyName>SerenaBot</AssemblyName>
+    <UserSecretsId>9baf5b0c-0f8d-40e4-80c7-9726c8fe6a12</UserSecretsId>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="ggsans-Normal.ttf" />
+    <None Remove="ggsans-Semibold.ttf" />
+    <None Remove="Resources\GPT2\avatars.json" />
+    <None Remove="Resources\GPT2\genmessages.exe" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\checkpoint" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\counter" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\encoder.json" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\events.out.tfevents.1673241042.270cc3126b36" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\hparams.json" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\model-5000.data-00000-of-00001" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\model-5000.index" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\model-5000.meta" />
+    <None Remove="Resources\GPT2\models\525099478173220869\193039523783901185\vocab.bpe" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\checkpoint" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\counter" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\encoder.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\events.out.tfevents.1673575725.c2f6fc35ab28" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\hparams.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\model-3000.data-00000-of-00001" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\model-3000.index" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\model-3000.meta" />
+    <None Remove="Resources\GPT2\models\816273308231532544\194187383011278848\vocab.bpe" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\checkpoint" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\counter" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\encoder.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\events.out.tfevents.1673474368.17412b074fd9" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\hparams.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\model-3000.data-00000-of-00001" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\model-3000.index" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\model-3000.meta" />
+    <None Remove="Resources\GPT2\models\816273308231532544\252534656061145088\vocab.bpe" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\checkpoint" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\counter" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\encoder.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\events.out.tfevents.1673457499.17412b074fd9" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\hparams.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\model-5000.data-00000-of-00001" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\model-5000.index" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\model-5000.meta" />
+    <None Remove="Resources\GPT2\models\816273308231532544\260146869429207042\vocab.bpe" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\checkpoint" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\counter" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\encoder.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\events.out.tfevents.1673343367.aeaffeb4678a" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\hparams.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\model-5000.data-00000-of-00001" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\model-5000.index" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\model-5000.meta" />
+    <None Remove="Resources\GPT2\models\816273308231532544\272944155205042177\vocab.bpe" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\checkpoint" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\counter" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\encoder.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\events.out.tfevents.1673642577.ca3e85bf67ea" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\hparams.json" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\model-13229.data-00000-of-00001" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\model-13229.index" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\model-13229.meta" />
+    <None Remove="Resources\GPT2\models\816273308231532544\99647895032053760\vocab.bpe" />
+    <None Remove="Resources\Markov\167380211430588416\100744267579805696.json" />
+    <None Remove="Resources\Markov\167380211430588416\100744267579805696_messages.json" />
+    <None Remove="Resources\Markov\167380211430588416\132299390684626944.json" />
+    <None Remove="Resources\Markov\167380211430588416\132299390684626944_messages.json" />
+    <None Remove="Resources\Markov\167380211430588416\global.json" />
+    <None Remove="Resources\Markov\525099478173220869\100744267579805696.json" />
+    <None Remove="Resources\Markov\525099478173220869\100744267579805696_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\140169451994611712.json" />
+    <None Remove="Resources\Markov\525099478173220869\140169451994611712_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\155020322318319617.json" />
+    <None Remove="Resources\Markov\525099478173220869\155020322318319617_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\159242762082844672.json" />
+    <None Remove="Resources\Markov\525099478173220869\159242762082844672_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\193039523783901185.json" />
+    <None Remove="Resources\Markov\525099478173220869\193039523783901185_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\312979597023117312.json" />
+    <None Remove="Resources\Markov\525099478173220869\312979597023117312_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\571881551873441792.json" />
+    <None Remove="Resources\Markov\525099478173220869\571881551873441792_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\67282172880367616.json" />
+    <None Remove="Resources\Markov\525099478173220869\67282172880367616_messages.json" />
+    <None Remove="Resources\Markov\525099478173220869\global.json" />
+    <None Remove="Resources\Markov\816273308231532544\100744267579805696.json" />
+    <None Remove="Resources\Markov\816273308231532544\100744267579805696_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\125506682187939841.json" />
+    <None Remove="Resources\Markov\816273308231532544\125506682187939841_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\134795518567120897.json" />
+    <None Remove="Resources\Markov\816273308231532544\134795518567120897_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\145374880043499521.json" />
+    <None Remove="Resources\Markov\816273308231532544\145374880043499521_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\155083011887464448.json" />
+    <None Remove="Resources\Markov\816273308231532544\155083011887464448_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\159242762082844672.json" />
+    <None Remove="Resources\Markov\816273308231532544\159242762082844672_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\181709609986162688.json" />
+    <None Remove="Resources\Markov\816273308231532544\181709609986162688_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\187727975003717641.json" />
+    <None Remove="Resources\Markov\816273308231532544\187727975003717641_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\188570394012286978.json" />
+    <None Remove="Resources\Markov\816273308231532544\188570394012286978_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\193025847173709824.json" />
+    <None Remove="Resources\Markov\816273308231532544\193025847173709824_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\194154319908569088.json" />
+    <None Remove="Resources\Markov\816273308231532544\194154319908569088_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\194187383011278848.json" />
+    <None Remove="Resources\Markov\816273308231532544\194187383011278848_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\199220174555971585.json" />
+    <None Remove="Resources\Markov\816273308231532544\199220174555971585_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\200879806840176641.json" />
+    <None Remove="Resources\Markov\816273308231532544\200879806840176641_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\201456893531652096.json" />
+    <None Remove="Resources\Markov\816273308231532544\201456893531652096_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\202068023794728960.json" />
+    <None Remove="Resources\Markov\816273308231532544\202068023794728960_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\207971996460384257.json" />
+    <None Remove="Resources\Markov\816273308231532544\207971996460384257_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\210591049188507648.json" />
+    <None Remove="Resources\Markov\816273308231532544\210591049188507648_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\212695479664902145.json" />
+    <None Remove="Resources\Markov\816273308231532544\212695479664902145_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\215443432401797131.json" />
+    <None Remove="Resources\Markov\816273308231532544\215443432401797131_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\218845169129095169.json" />
+    <None Remove="Resources\Markov\816273308231532544\218845169129095169_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\221718395803009025.json" />
+    <None Remove="Resources\Markov\816273308231532544\221718395803009025_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\222463578181992458.json" />
+    <None Remove="Resources\Markov\816273308231532544\222463578181992458_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\223924149037301760.json" />
+    <None Remove="Resources\Markov\816273308231532544\223924149037301760_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\224236597103689728.json" />
+    <None Remove="Resources\Markov\816273308231532544\224236597103689728_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\232108341214707714.json" />
+    <None Remove="Resources\Markov\816273308231532544\232108341214707714_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\234482965604728834.json" />
+    <None Remove="Resources\Markov\816273308231532544\234482965604728834_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\239190045435625472.json" />
+    <None Remove="Resources\Markov\816273308231532544\239190045435625472_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\243913803710857217.json" />
+    <None Remove="Resources\Markov\816273308231532544\243913803710857217_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\252534656061145088.json" />
+    <None Remove="Resources\Markov\816273308231532544\252534656061145088_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\260146869429207042.json" />
+    <None Remove="Resources\Markov\816273308231532544\260146869429207042_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\260907545571491851.json" />
+    <None Remove="Resources\Markov\816273308231532544\260907545571491851_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\265487225398099968.json" />
+    <None Remove="Resources\Markov\816273308231532544\265487225398099968_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\271409580074991616.json" />
+    <None Remove="Resources\Markov\816273308231532544\271409580074991616_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\272944155205042177.json" />
+    <None Remove="Resources\Markov\816273308231532544\272944155205042177_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\286302237255401473.json" />
+    <None Remove="Resources\Markov\816273308231532544\286302237255401473_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\306774520037900300.json" />
+    <None Remove="Resources\Markov\816273308231532544\306774520037900300_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\313488972103942146.json" />
+    <None Remove="Resources\Markov\816273308231532544\313488972103942146_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\321767892733657108.json" />
+    <None Remove="Resources\Markov\816273308231532544\321767892733657108_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\329337012895088641.json" />
+    <None Remove="Resources\Markov\816273308231532544\329337012895088641_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\337372877248790528.json" />
+    <None Remove="Resources\Markov\816273308231532544\337372877248790528_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\355338314091331584.json" />
+    <None Remove="Resources\Markov\816273308231532544\355338314091331584_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\356245631041273857.json" />
+    <None Remove="Resources\Markov\816273308231532544\356245631041273857_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\356914462776754186.json" />
+    <None Remove="Resources\Markov\816273308231532544\356914462776754186_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\361048534570631168.json" />
+    <None Remove="Resources\Markov\816273308231532544\361048534570631168_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\364914321307729932.json" />
+    <None Remove="Resources\Markov\816273308231532544\364914321307729932_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\381863837642784768.json" />
+    <None Remove="Resources\Markov\816273308231532544\381863837642784768_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\384503812813225984.json" />
+    <None Remove="Resources\Markov\816273308231532544\384503812813225984_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\387290675130925066.json" />
+    <None Remove="Resources\Markov\816273308231532544\387290675130925066_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\389867804414705666.json" />
+    <None Remove="Resources\Markov\816273308231532544\389867804414705666_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\396360131815931906.json" />
+    <None Remove="Resources\Markov\816273308231532544\396360131815931906_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\407336952593907722.json" />
+    <None Remove="Resources\Markov\816273308231532544\407336952593907722_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\427906163196297256.json" />
+    <None Remove="Resources\Markov\816273308231532544\427906163196297256_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\434130064402284544.json" />
+    <None Remove="Resources\Markov\816273308231532544\434130064402284544_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\445882650444431372.json" />
+    <None Remove="Resources\Markov\816273308231532544\445882650444431372_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\456226577798135808.json" />
+    <None Remove="Resources\Markov\816273308231532544\456226577798135808_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\457600313885589505.json" />
+    <None Remove="Resources\Markov\816273308231532544\457600313885589505_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\460947577508986881.json" />
+    <None Remove="Resources\Markov\816273308231532544\460947577508986881_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\465662431406981131.json" />
+    <None Remove="Resources\Markov\816273308231532544\465662431406981131_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\465787017188474880.json" />
+    <None Remove="Resources\Markov\816273308231532544\465787017188474880_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\532617591454433302.json" />
+    <None Remove="Resources\Markov\816273308231532544\532617591454433302_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\568144964912021514.json" />
+    <None Remove="Resources\Markov\816273308231532544\568144964912021514_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\678210567495876627.json" />
+    <None Remove="Resources\Markov\816273308231532544\678210567495876627_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\716456544446840943.json" />
+    <None Remove="Resources\Markov\816273308231532544\716456544446840943_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\773256744335704154.json" />
+    <None Remove="Resources\Markov\816273308231532544\773256744335704154_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\780274391165829209.json" />
+    <None Remove="Resources\Markov\816273308231532544\780274391165829209_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\843579974903660594.json" />
+    <None Remove="Resources\Markov\816273308231532544\843579974903660594_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\920435503910748210.json" />
+    <None Remove="Resources\Markov\816273308231532544\920435503910748210_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\989794878282141726.json" />
+    <None Remove="Resources\Markov\816273308231532544\989794878282141726_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\99647895032053760.json" />
+    <None Remove="Resources\Markov\816273308231532544\99647895032053760_messages.json" />
+    <None Remove="Resources\Markov\816273308231532544\global.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\avatars.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\genmessages.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\checkpoint">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\counter">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\events.out.tfevents.1673241042.270cc3126b36">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\hparams.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\model-5000.data-00000-of-00001">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\model-5000.index">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\model-5000.meta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\525099478173220869\193039523783901185\vocab.bpe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\checkpoint">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\counter">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\events.out.tfevents.1673575725.c2f6fc35ab28">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\hparams.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\model-3000.data-00000-of-00001">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\model-3000.index">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\model-3000.meta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\194187383011278848\vocab.bpe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\checkpoint">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\counter">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\events.out.tfevents.1673474368.17412b074fd9">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\hparams.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\model-3000.data-00000-of-00001">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\model-3000.index">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\model-3000.meta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\252534656061145088\vocab.bpe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\checkpoint">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\counter">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\events.out.tfevents.1673457499.17412b074fd9">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\hparams.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\model-5000.data-00000-of-00001">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\model-5000.index">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\model-5000.meta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\260146869429207042\vocab.bpe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\checkpoint">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\counter">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\events.out.tfevents.1673343367.aeaffeb4678a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\hparams.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\model-5000.data-00000-of-00001">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\model-5000.index">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\model-5000.meta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\272944155205042177\vocab.bpe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\checkpoint">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\counter">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\encoder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\events.out.tfevents.1673642577.ca3e85bf67ea">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\hparams.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\model-13229.data-00000-of-00001">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\model-13229.index">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\model-13229.meta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GPT2\models\816273308231532544\99647895032053760\vocab.bpe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\167380211430588416\100744267579805696.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\167380211430588416\100744267579805696_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\167380211430588416\132299390684626944.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\167380211430588416\132299390684626944_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\167380211430588416\global.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\100744267579805696.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\100744267579805696_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\140169451994611712.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\140169451994611712_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\155020322318319617.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\155020322318319617_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\159242762082844672.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\159242762082844672_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\193039523783901185.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\193039523783901185_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\312979597023117312.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\312979597023117312_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\571881551873441792.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\571881551873441792_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\67282172880367616.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\67282172880367616_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\525099478173220869\global.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\100744267579805696.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\100744267579805696_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\125506682187939841.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\125506682187939841_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\134795518567120897.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\134795518567120897_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\145374880043499521.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\145374880043499521_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\155083011887464448_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\159242762082844672_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\181709609986162688.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\181709609986162688_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\187727975003717641.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\187727975003717641_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\188570394012286978.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\188570394012286978_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\193025847173709824.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\193025847173709824_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\194154319908569088.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\194154319908569088_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\194187383011278848.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\194187383011278848_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\199220174555971585.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\199220174555971585_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\200879806840176641.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\200879806840176641_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\201456893531652096.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\201456893531652096_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\202068023794728960.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\202068023794728960_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\207971996460384257.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\207971996460384257_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\210591049188507648.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\210591049188507648_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\212695479664902145.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\212695479664902145_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\215443432401797131.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\215443432401797131_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\218845169129095169_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\221718395803009025_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\222463578181992458.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\222463578181992458_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\223924149037301760_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\224236597103689728.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\224236597103689728_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\232108341214707714_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\234482965604728834.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\234482965604728834_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\239190045435625472.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\239190045435625472_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\243913803710857217_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\252534656061145088.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\252534656061145088_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\260146869429207042.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\260146869429207042_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\260907545571491851.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\260907545571491851_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\265487225398099968_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\271409580074991616_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\272944155205042177.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\272944155205042177_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\286302237255401473_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\306774520037900300.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\306774520037900300_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\313488972103942146.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\313488972103942146_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\321767892733657108.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\321767892733657108_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\329337012895088641.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\329337012895088641_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\337372877248790528.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\337372877248790528_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\355338314091331584.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\355338314091331584_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\356245631041273857.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\356245631041273857_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\356914462776754186_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\361048534570631168.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\361048534570631168_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\364914321307729932.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\364914321307729932_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\381863837642784768_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\384503812813225984.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\384503812813225984_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\387290675130925066_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\389867804414705666_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\396360131815931906_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\407336952593907722.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\407336952593907722_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\427906163196297256_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\434130064402284544.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\434130064402284544_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\445882650444431372.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\445882650444431372_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\456226577798135808_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\457600313885589505.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\457600313885589505_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\460947577508986881.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\460947577508986881_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\465662431406981131_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\465787017188474880_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\532617591454433302_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\568144964912021514.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\568144964912021514_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\678210567495876627_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\716456544446840943_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\773256744335704154_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\780274391165829209.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\780274391165829209_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\843579974903660594_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\920435503910748210.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\920435503910748210_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\989794878282141726_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\99647895032053760.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\99647895032053760_messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Markov\816273308231532544\global.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ggsans-Normal.ttf" />
+    <EmbeddedResource Include="Resources\ggsans-Semibold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+    <PackageReference Include="Remora.Commands" Version="10.0.3" />
+    <PackageReference Include="Remora.Discord.API" Version="69.0.0" />
+    <PackageReference Include="Remora.Discord.API.Abstractions" Version="73.0.0" />
+    <PackageReference Include="Remora.Discord.Commands" Version="26.1.1" />
+    <PackageReference Include="Remora.Discord.Extensions" Version="5.2.2" />
+    <PackageReference Include="Remora.Discord.Gateway" Version="11.0.2" />
+    <PackageReference Include="Remora.Discord.Hosting" Version="6.0.1" />
+    <PackageReference Include="Remora.Discord.Pagination" Version="3.0.12" />
+    <PackageReference Include="Remora.Discord.Rest" Version="44.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    <PackageReference Include="System.Net.WebSockets.Client" Version="4.3.2" />
+  </ItemGroup>
+
+</Project>
